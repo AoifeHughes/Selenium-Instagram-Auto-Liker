@@ -25,7 +25,7 @@ Please replace `{your_instagram_ID}` with your instagram ID
 
 Please replace `{your_instagram_password}` with your instagram Password
 
-Please replace `{target_instagram_URL}` with the target instagram ID 
+Please replace `{target_instagram_ID}` with the target instagram ID 
 
 ## Running the code
 

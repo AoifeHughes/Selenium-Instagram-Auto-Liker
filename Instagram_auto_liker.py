@@ -10,8 +10,8 @@ def main():
     passd = '{your_instagram_password}'
     browser_locale = 'en'
     try:
-        url = 'https://www.instagram.com'
-        targetURL ='{target_instagram_URL}'
+        url = 'https://www.instagram.com/'
+        targetURL = url+'{target_instagram_ID}'
         chrome_options = webdriver.ChromeOptions()
         prefs = {"profile.default_content_setting_values.notifications" : 2}
         chrome_options.add_argument("--lang={}".format(browser_locale))
@@ -24,15 +24,13 @@ def main():
 
         username = driver.find_element_by_name('username')
         username.send_keys(id)
-
         password = driver.find_element_by_name('password')
         password.send_keys(passd)
-        time.sleep(1)
-
+        time.sleep(2)
         password.send_keys(Keys.ENTER)
-        time.sleep(1)
-
+        time.sleep(2)
         driver.get(targetURL)
+        time.sleep(2)
         first_picture(driver)
         like_pic(driver) 
         continue_liking(driver)
@@ -79,14 +77,3 @@ def continue_liking(driver):
             break
 
 main()
-
-#bug/issue found
-#1. if post already been liked, will like the first comment
-#2. if post already beem liked and no comment, program exit with error
-#3. Not support 2FA enabled account
-#4. default language is set to 'en', which will affect the "Like" button content `[@aria-label="Like"]`
-http://chromedriver.chromium.org/downloads
-https://github.com/sameerkumar18/Instagram-Auto-Liker
-https://github.com/davidteather/Instagram-Bot
-
-Selenium-Instagram-Auto-Liker
