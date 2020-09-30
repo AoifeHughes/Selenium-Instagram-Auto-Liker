@@ -1,8 +1,6 @@
-import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import sys
 
 def main():
 
@@ -37,8 +35,6 @@ def main():
 
         # Close the tab/browser when done
         Driver.CloseDriver()
-    except:
-        print "error"
 
 def first_picture(driver): 
         # finds the first picture  
