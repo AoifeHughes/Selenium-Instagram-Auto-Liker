@@ -34,7 +34,7 @@ def main():
         like_pic(driver)
         continue_liking(driver)
         # Close the tab/browser when done
-    except:
+    except BaseException:
         print("Driver error")
 
 
