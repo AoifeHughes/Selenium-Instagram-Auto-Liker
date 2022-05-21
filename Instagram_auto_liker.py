@@ -1,4 +1,4 @@
-from selenium import webdriver
+import undetected_chromedriver.v2 as webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
